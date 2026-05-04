@@ -2,6 +2,17 @@
 
 yuanle-blog 的正式部署方式是 `OpenNext + Cloudflare Workers`。
 
+## Cloudflare「连接 Git」构建 / 部署命令
+
+若控制台里分为 **构建命令** 与 **部署命令**：
+
+| 步骤 | 推荐写法 | 说明 |
+|------|----------|------|
+| 构建 | `npm run build` | `package.json` 中已包含 `next build` 与 `opennextjs-cloudflare build`，会生成 `.open-next`。 |
+| 部署 | `npx wrangler deploy` | 依赖上一步产物；**不要**只跑 `next build` 后直接 `wrangler deploy`，否则会报「Could not find compiled Open Next config」。 |
+
+也可将 **部署命令** 设为 `npm run deploy`（会再次校验配置、对远程 D1 执行 schema/seed 并 `opennextjs-cloudflare deploy`），与仓库脚本一致。
+
 ## 首次部署
 
 ### 1. 安装依赖和环境变量
