@@ -1,5 +1,5 @@
 /**
- * Qiaomu Blog Clipper - Background Service Worker
+ * yuanle-blog Clipper - Background Service Worker
  *
  * Flow:
  * 1. Receive "clip" message from popup with { title, category, status }

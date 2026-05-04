@@ -38,8 +38,7 @@ function EditorialNavBar({
   navLinks: SiteNavLink[]
 }) {
   const defaultLinks = [
-    { label: 'GitHub', url: 'https://github.com/joeseesun/', openInNewTab: true },
-    { label: 'Twitter', url: 'https://x.com/vista8/', openInNewTab: true },
+    { label: 'GitHub', url: 'https://github.com/itx-man/yuanle-blog', openInNewTab: true },
     { label: 'RSS', url: '/feed.xml', openInNewTab: false },
   ]
   const links = navLinks.length > 0 ? navLinks : defaultLinks
@@ -126,7 +125,7 @@ export function HomeVariantB({
             fontFamily: '"Noto Serif SC", "Source Han Serif SC", Georgia, serif',
             color: FG,
           }}>
-            乔木<span style={{ color: ACCENT }}>·</span>博客
+            yuanle<span style={{ color: ACCENT }}>-</span>blog
           </h1>
         </Link>
         <div className="editorial-masthead-meta" style={{
@@ -361,7 +360,7 @@ export function HomeVariantB({
         fontFamily: '"JetBrains Mono", ui-monospace, monospace',
         letterSpacing: '0.1em',
       }}>
-        <span>© {new Date().getFullYear()} 乔木博客</span>
+        <span>© {new Date().getFullYear()} yuanle-blog</span>
         <span>独立 · 不商业化 · RSS 友好</span>
       </div>
 

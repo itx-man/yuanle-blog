@@ -1,5 +1,6 @@
 const DEV_SITE_URL = 'http://localhost:3000'
-const DEFAULT_PRODUCTION_SITE_URL = 'https://blog.qiaomu.ai'
+/** 未配置 NEXT_PUBLIC_SITE_URL 时的占位；生产环境请在 Worker 变量中设置真实站点 */
+const DEFAULT_PRODUCTION_SITE_URL = 'https://yuanle-blog.workers.dev'
 
 function parseSiteUrl(value: string): URL | null {
   try {

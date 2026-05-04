@@ -1,8 +1,8 @@
-# 向阳乔木博客 - AI 协作指南
+# yuanle-blog - AI 协作指南
 
 ## 项目概述
 
-这是一个基于 Cloudflare + Next.js + Novel 编辑器构建的现代博客系统，专注于 AI 工具和知识的传播。
+基于 Cloudflare + Next.js + Novel 编辑器构建的个人博客（yuanle-blog），从 Qiaomu 模板 fork 并独立维护。
 
 ## 设计上下文
 
@@ -22,7 +22,7 @@
 
 ### 品牌定位
 
-**向阳乔木** - 传播 AI 工具和知识的综合性学习平台
+**yuanle-blog** - 个人写作与知识沉淀站点
 
 **核心价值**：
 - 温暖而理性：有人情味，但保持专业判断
@@ -112,10 +112,8 @@
 
 ## 品牌资产
 
-- **域名**：blog.qiaomu.ai
-- **X (Twitter)**：[@vista8](https://x.com/vista8)
-- **微信公众号**：向阳乔木推荐看
-- **GitHub**：[@joeseesun](https://github.com/joeseesun)
+- **域名**：由 `NEXT_PUBLIC_SITE_URL` 决定（如 `*.workers.dev` 或自定义域）
+- **GitHub**：<https://github.com/itx-man/yuanle-blog>
 
 ---
 

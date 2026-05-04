@@ -1,14 +1,14 @@
 {
-  "name": "obsidian-qiaomu-blog-publisher",
+  "name": "obsidian-yuanle-blog-publisher",
   "version": "1.0.0",
-  "description": "Publish Obsidian notes to Qiaomu Blog as drafts",
+  "description": "Publish Obsidian notes to yuanle-blog as drafts",
   "main": "main.js",
   "scripts": {
     "dev": "node esbuild.config.mjs",
     "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production"
   },
   "keywords": [],
-  "author": "joeseesun",
+  "author": "itx-man",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.11.0",

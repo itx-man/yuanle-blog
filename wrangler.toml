@@ -30,10 +30,10 @@ binding = "IMAGES"
 # Optional Queue binding for background jobs. Uncomment after creating the queue.
 # [[queues.producers]]
 # binding = "BACKGROUND_QUEUE"
-# queue = "qiaomu-blog-background-jobs"
+# queue = "yuanle-blog-background-jobs"
 #
 # [[queues.consumers]]
-# queue = "qiaomu-blog-background-jobs"
+# queue = "yuanle-blog-background-jobs"
 
 [vars]
 NEXT_PUBLIC_SITE_URL = "https://your-domain.com"

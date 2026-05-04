@@ -1,10 +1,10 @@
 {
-  "id": "qiaomu-blog-publisher",
-  "name": "Qiaomu Blog Publisher",
+  "id": "yuanle-blog-publisher",
+  "name": "yuanle-blog Publisher",
   "version": "1.0.0",
   "minAppVersion": "1.0.0",
-  "description": "一键发布笔记到 Qiaomu Blog 草稿",
-  "author": "joeseesun",
-  "authorUrl": "https://github.com/joeseesun",
+  "description": "一键发布笔记到 yuanle-blog 草稿",
+  "author": "itx-man",
+  "authorUrl": "https://github.com/itx-man",
   "isDesktopOnly": false
 }

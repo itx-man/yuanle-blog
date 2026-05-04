@@ -1,15 +1,12 @@
-# Qiaomu Blog Open Source
+# yuanle-blog
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/joeseesun/qiaomu-blog-opensource)
-[![Use this template](https://img.shields.io/badge/GitHub-Use%20this%20template-111111?logo=github)](https://github.com/joeseesun/qiaomu-blog-opensource/generate)
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/itx-man/yuanle-blog)
+[![Use this template](https://img.shields.io/badge/GitHub-Use%20this%20template-111111?logo=github)](https://github.com/itx-man/yuanle-blog/generate)
 
-如果你也想拥有一个真正属于自己的学习、写作、分享阵地，而不是把内容完全寄托在平台算法上，这个项目就是为此做的。
+基于 [Qiaomu Blog Open Source](https://github.com/joeseesun/qiaomu-blog-opensource) 的个人博客实例：前后台双编辑器、AI 写作辅助、AI 生图、主题系统、全文检索、API Token、外部发布生态等能力开箱可用。
 
-Qiaomu Blog Open Source 不是一个只会渲染 Markdown 的静态模板，而是一套完整的博客系统：前后台双编辑器、AI 写作辅助、AI 生图、主题系统、全文检索、API Token、外部发布生态都已经接好，目标就是让你更容易持续写下去。
-
-- 在线示例：<https://blog.qiaomu.ai/>
-- 介绍文章：<https://blog.qiaomu.ai/qiaomu-blog-opensource>
-- 当前仓库：<https://github.com/joeseesun/qiaomu-blog-opensource>
+- 当前仓库：<https://github.com/itx-man/yuanle-blog>
+- 上游模板与介绍：<https://github.com/joeseesun/qiaomu-blog-opensource> · <https://blog.qiaomu.ai/qiaomu-blog-opensource>
 
 ## 为什么值得做成自己的站
 
@@ -62,7 +59,7 @@ Qiaomu Blog Open Source 不是一个只会渲染 Markdown 的静态模板，而�
 
 - [`ecosystem/chrome-clipper`](ecosystem/chrome-clipper/README.md)：浏览器网页剪藏，直接进入博客草稿箱
 - [`ecosystem/obsidian-publisher`](ecosystem/obsidian-publisher/README.md)：从 Obsidian 一键发布到博客
-- [`ecosystem/qiaomu-blog-publish-skill`](ecosystem/qiaomu-blog-publish-skill/README.md)：通过 Claude Skill / 命令工作流直接发布
+- [`ecosystem/yuanle-blog-publish-skill`](ecosystem/yuanle-blog-publish-skill/README.md)：通过 Claude Skill / 命令工作流直接发布
 - [`ecosystem/README.md`](ecosystem/README.md)：生态工具总览
 
 ## 一键部署到 Cloudflare
@@ -98,8 +95,8 @@ npm run deploy
 ## 本地开发
 
 ```bash
-git clone https://github.com/joeseesun/qiaomu-blog-opensource.git
-cd qiaomu-blog-opensource
+git clone https://github.com/itx-man/yuanle-blog.git
+cd yuanle-blog
 npm install
 cp .env.example .env.local
 npm run dev
@@ -154,9 +151,7 @@ npm run preview
 | `npm run preview` | Worker 运行时预览 |
 | `npm run deploy` | 部署到 Cloudflare Workers |
 
-## 作者
+## 维护与致谢
 
-- 向阳乔木
-- GitHub：<https://github.com/joeseesun>
-- X / Twitter：<https://x.com/vista8>
-- Blog：<https://blog.qiaomu.ai/>
+- 本仓库维护：<https://github.com/itx-man>
+- 模板作者（Qiaomu）：向阳乔木 · GitHub：<https://github.com/joeseesun> · Blog：<https://blog.qiaomu.ai/>

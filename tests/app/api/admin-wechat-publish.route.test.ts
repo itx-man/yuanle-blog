@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 const mocks = vi.hoisted(() => ({
   ensureAuthenticatedRequest: vi.fn(),
@@ -27,6 +27,7 @@ import { POST } from '@/app/api/admin/wechat-publish/route'
 
 describe('/api/admin/wechat-publish route', () => {
   beforeEach(() => {
+    vi.stubEnv('NEXT_PUBLIC_SITE_URL', 'https://yuanle-blog.example.com')
     vi.clearAllMocks()
     mocks.getRouteEnvWithDb.mockResolvedValue({
       ok: true,
@@ -40,6 +41,10 @@ describe('/api/admin/wechat-publish route', () => {
       token: 'bridge-token',
     })
     mocks.assertWechatBridgeReady.mockImplementation((config) => config)
+  })
+
+  afterEach(() => {
+    vi.unstubAllEnvs()
   })
 
   it('rejects missing account_id', async () => {
@@ -123,9 +128,9 @@ describe('/api/admin/wechat-publish route', () => {
     const [, , requestInit] = mocks.fetchWechatBridgeJson.mock.calls[0]
     const forwarded = JSON.parse(String(requestInit.body))
 
-    expect(forwarded.author).toBe('向阳乔木')
+    expect(forwarded.author).toBe('yuanle-blog')
     expect(forwarded.need_open_comment).toBe(true)
     expect(forwarded.only_fans_can_comment).toBe(false)
-    expect(forwarded.cover_image_url).toMatch(/^https:\/\/blog\.qiaomu\.ai\/default-covers\/qm-cover-[1-3]\.jpg$/)
+    expect(forwarded.cover_image_url).toMatch(/^https:\/\/yuanle-blog\.example\.com\/default-covers\/qm-cover-[1-3]\.jpg$/)
   })
 })

@@ -1,5 +1,5 @@
 {
-  "name": "qiaomu-blog-opensource",
+  "name": "yuanle-blog",
   "version": "0.1.0",
   "private": false,
   "scripts": {
@@ -69,11 +69,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joeseesun/qiaomu-blog-opensource.git"
+    "url": "git+https://github.com/itx-man/yuanle-blog.git"
   },
-  "homepage": "https://github.com/joeseesun/qiaomu-blog-opensource",
+  "homepage": "https://github.com/itx-man/yuanle-blog",
   "bugs": {
-    "url": "https://github.com/joeseesun/qiaomu-blog-opensource/issues"
+    "url": "https://github.com/itx-man/yuanle-blog/issues"
   },
   "cloudflare": {
     "bindings": {
