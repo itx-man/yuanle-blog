@@ -8,12 +8,20 @@ yuanle-blog 的正式部署方式是 `OpenNext + Cloudflare Workers`。
 
 | 步骤 | 推荐写法 | 说明 |
 |------|----------|------|
-| 构建 | `npx opennextjs-cloudflare build` | **不要**只填 `npm run build`：那样只有 `next build`，没有 OpenNext 产物，部署时会报 *Could not find compiled Open Next config*。本条命令内部会再跑 `npm run build`（即 `next build`），并生成 `.open-next`。`package.json` 里的 `build` 必须保持为**仅** `next build`，否则 OpenNext 会递归调用自身直至超时。 |
+| 构建 | `npx opennextjs-cloudflare build` | **不要**只填 `npm run build` 且省略 OpenNext：会缺少 `.open-next`。本条命令内部会再跑 `npm run build`（`next build --webpack`），并生成 OpenNext 产物。`build` 脚本**不得**再追加 `opennextjs-cloudflare build`，否则会递归超时。 |
 | 部署 | `npx wrangler deploy` | 依赖上一步的 OpenNext 产物。 |
 
 **备选（会多跑一遍 `next build`，稍慢）：** `npm run build && npx opennextjs-cloudflare build`，或本地脚本 `npm run build:cloudflare`。
 
 也可将 **部署命令** 设为 `npm run deploy`（会再次校验配置、对远程 D1 执行 schema/seed 并 `opennextjs-cloudflare deploy`），与仓库脚本一致。
+
+### Workers 脚本体积（免费版 3 MiB）
+
+部署若报错 **Your Worker exceeded the size limit of 3 MiB**：免费套餐对**压缩后**脚本大小有约 **3 MiB** 上限；付费 Workers 可提高到 **10 MiB**（见 [Workers limits](https://developers.cloudflare.com/workers/platform/limits/#worker-size)）。
+
+本仓库的 `npm run build` 使用 **`next build --webpack`**（而非默认 Turbopack），尽量减小打进的 `@vercel/og` / WASM 体积，便于贴近免费版限制。若仍超限，需要**升级 Workers 套餐**或自行删减服务端依赖。
+
+请在 Cloudflare 环境变量里把 **`NEXT_PUBLIC_SITE_URL`** 设成真实博客地址（日志里若仍是 `https://your-domain.com`，SEO 与绝对链接会不正确）。
 
 ## 首次部署
 

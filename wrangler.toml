@@ -36,7 +36,8 @@ binding = "IMAGES"
 # queue = "yuanle-blog-background-jobs"
 
 [vars]
-NEXT_PUBLIC_SITE_URL = "https://your-domain.com"
+# 部署后请在控制台改为你的自定义域名；未绑域名前可用 *.workers.dev
+NEXT_PUBLIC_SITE_URL = "https://yuanle-blog.workers.dev"
 AI_BASE_URL = "https://api.openai.com/v1"
 AI_MODEL = "gpt-4o-mini"
 WORKERS_AI_MODEL = "@cf/meta/llama-3.1-8b-instruct"
